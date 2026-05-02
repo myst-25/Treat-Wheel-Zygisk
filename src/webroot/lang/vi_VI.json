@@ -9,7 +9,8 @@
         "ignoring": "Chế độ không xử lý",
         "unknown": "Không xác định",
         "disabled": "Đã vô hiệu hoá",
-        "incompatibleModules": "Phát hiện mô đun không tương thích: %s"
+        "incompatibleModules": "Phát hiện mô đun không tương thích: %s",
+        "ciBuild": "Experimental build detected. Some features may not work as expected."
       },
       "version": "Phiên bản",
       "rootImpl": "Triển khai root",

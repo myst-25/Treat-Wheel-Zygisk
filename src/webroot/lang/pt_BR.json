@@ -9,7 +9,8 @@
         "ignoring": "Ignorando",
         "unknown": "Incapaz de determinar",
         "disabled": "Desativado",
-        "incompatibleModules": "Módulos incompatíveis detectados: %s"
+        "incompatibleModules": "Módulos incompatíveis detectados: %s",
+        "ciBuild": "Build experimental detectada. Algumas funcionalidades podem não funcionar como esperado."
       },
       "version": "Versão",
       "rootImpl": "Implementação de root",

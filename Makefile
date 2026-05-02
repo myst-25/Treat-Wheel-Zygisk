@@ -68,15 +68,15 @@ build:
 	@echo Copying module.prop file...
 	@cp $(BUILD_PATH)/../module.prop $(BUILD_PATH)/module.prop
 
-	@if [ "$$HAS_ADDITIONAL_TEXT" = "true" ]; then \
-		echo Appending expiration date to module.prop...; \
-		sed -i "s|^description=\(.*\)|description=\1 $$ADDITIONAL_DESCRIPTION|" $(BUILD_PATH)/module.prop; \
-	fi
-
 	@echo Creating zip...
 
 	@rm -rf $(BUILD_PATH)/webroot
 	@cp -r src/webroot $(BUILD_PATH)
+
+	@if [ "$(IS_GITHUB_ACTION)" = "true" ]; then \
+		echo Detected CI environment. Modifying web UI for CI build...; \
+		sed -i 's/ display: none;//g' $(BUILD_PATH)/webroot/js/pages/home/index.html; \
+	fi
 
 	@rm -rf ../build/TreatWheel.zip
 	@(cd $(BUILD_PATH) && zip -r ../TreatWheel.zip .) > /dev/null

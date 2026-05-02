@@ -9,7 +9,8 @@
         "ignoring": "Görmezden geliniyor",
         "unknown": "Belirlenemiyor",
         "disabled": "Devre dışı",
-        "incompatibleModules": "Uyumsuz modüller tespit edildi: %s"
+        "incompatibleModules": "Uyumsuz modüller tespit edildi: %s",
+        "ciBuild": "Deneysel derleme tespit edildi. Bazı özellikler beklendiği gibi çalışmayabilir."
       },
       "version": "Sürüm",
       "rootImpl": "Root Metodu",
