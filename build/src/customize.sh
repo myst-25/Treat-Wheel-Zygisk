@@ -19,13 +19,15 @@ if [ -d "/data/adb/modules/nohello" ] || [ -d "/data/adb/modules_update/nohello"
   abort "! NoHello is outdated and doesn't provide any benefits. Please uninstall it before installing Treat Wheel."
 fi
 
+REZYGISK_REQUIRED_VERSION=508
+
 # INFO: Treat Wheel won't work in any other Zygisk anyway. Demand ReZygisk.
 if [ -d "/data/adb/modules_update/rezygisk" ]; then
   REZYGISK_PATH="/data/adb/modules_update/rezygisk"
 elif [ -d "/data/adb/modules/rezygisk" ]; then
   REZYGISK_PATH="/data/adb/modules/rezygisk"
 else
-  ui_print "- ReZygisk 484 or higher is required but not found."
+  ui_print "- ReZygisk $REZYGISK_REQUIRED_VERSION or higher is required but not found."
   abort    "- No other Zygisk implementation is supported or works with Treat Wheel."
 fi
 
@@ -34,7 +36,6 @@ if [ -z "$REZYGISK_VERSION" ]; then
   abort "! Could not determine the installed ReZygisk's version."
 fi
 
-REZYGISK_REQUIRED_VERSION=484
 if [ "$REZYGISK_VERSION" -lt "$REZYGISK_REQUIRED_VERSION" ]; then
   ui_print "! The installed ReZygisk ($REZYGISK_VERSION) is too old."
   abort    "! Please update to version $REZYGISK_REQUIRED_VERSION or higher."

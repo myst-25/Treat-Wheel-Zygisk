@@ -11,7 +11,7 @@ World's most advanced and simplest general purpose root module.
 ## Requirements
 
 - Magisk Official, KernelSU Official (or API compliant), or APatch
-- ReZygisk 498 or higher
+- ReZygisk 508 or higher
 - Android 7.1 or higher
 
 ## Support
