@@ -24,7 +24,7 @@ jobs:
       - name: Build with make
         env:
           IS_GITHUB_ACTION: true
-        run: cd module && make
+        run: make
 
       - name: Upload
         uses: actions/upload-artifact@v7
