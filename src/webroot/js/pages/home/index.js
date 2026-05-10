@@ -174,21 +174,6 @@ export async function load() {
 
     rootCss.style.setProperty('--bright', '#766000')
     tw_icon_state.innerHTML = '<img class="brightc" src="assets/warn.svg">'
-  } else if (status.stdout === 'version_expired') {
-    tw_state.innerHTML = strings.workingModes.testVersionExpired
-
-    rootCss.style.setProperty('--bright', '#ff0000')
-    tw_icon_state.innerHTML = '<img class="brightc" src="assets/mark.svg">'
-  } else if (status.stdout === 'kang_detected') {
-    tw_state.innerHTML = strings.workingModes.improperAttribution
-
-    rootCss.style.setProperty('--bright', '#ff0000')
-    tw_icon_state.innerHTML = '<img class="brightc" src="assets/mark.svg">'
-  } else if (status.stdout === 'sigcheck_failed') {
-    tw_state.innerHTML = strings.workingModes.sigcheckFailed
-
-    rootCss.style.setProperty('--bright', '#ff0000')
-    tw_icon_state.innerHTML = '<img class="brightc" src="assets/mark.svg">'
   } else if (isIgnoring) {
     tw_state.innerHTML = strings.workingModes.ignoring
 
